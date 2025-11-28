@@ -1,65 +1,41 @@
-# Form Matrix · 可视化表单生成器
+# Form Matrix · 可视化表单生成器 🇨🇳
 
-English version follows Chinese section.
+> 轻松拼搭表单规范，酷似“乐高 Dashboard”。  
+> English guide ➜ [README.en.md](README.en.md)
 
-## 简介
+## ✨ 项目速览
 
-Form Matrix 是一个使用 **Vite + Vue 3** 开发的「所见即所得」表单规范构建器，可通过点击、输入快速生成配置，并提供模板管理、字段构建、JSON 预览与 GitHub Pages 自动部署。
+- ⚡️ **所见即所得**：使用 Vite + Vue 3 构建，极速响应，所有操作都有即时反馈。
+- 📚 **模板仓库**：内置示例与空白模板，面板可随时折叠/展开，不占视野。
+- 🧱 **字段工作台**：支持文本、选择、数组等多类型字段，包含排序、编辑、删除全流程。
+- 🪟 **扁平双视图**：字段列表与 JSON 预览同列切换，所见即所得。
+- 🚀 **一键导出**：复制到剪贴板、下载 JSON、自动部署 GitHub Pages，一条龙搞定。
 
-## 功能特点
-
-- **模板仓库**：内置示例/空白模板，可折叠隐藏并一键切换。
-- **字段构建面板**：支持文本、选择、日期、数组等类型的新增、编辑、排序、删除。
-- **字段列表 / JSON 预览**：Tab 共享同一面板，实时查看结构或原始 JSON。
-- **快速导出**：支持复制到剪贴板或下载 JSON 文件。
-- **自动部署**：提供 GitHub Actions 工作流，构建后推送至 GitHub Pages。
-
-## 开发与构建
+## 🛠️ 快速开始
 
 ```bash
-npm install
-npm run dev
-npm run build
+npm install        # 安装依赖
+npm run dev        # 启动开发服务器 (http://localhost:5173/)
+npm run build      # 生成生产包
 ```
 
-开发服务器默认运行在 `http://localhost:5173/`。
+## 🌐 部署指南
 
-## GitHub Pages 部署
+项目自带 `.github/workflows/deploy.yml`，开箱即用：
 
-项目提供 `.github/workflows/deploy.yml`：
-- Push 到 `master` 或手动触发 workflow。
-- 使用 `VITE_BASE_PATH=/仓库名/` 构建，确保静态资源路径正确。
-- `actions/deploy-pages@v4` 自动发布到 GitHub Pages。
-请在仓库 Settings → Pages 选择 “GitHub Actions” 作为 Source。
+1. 将仓库 Pages Source 设为 “GitHub Actions”。
+2. Push 到 `master` 或手动触发 workflow。
+3. Workflow 会自动注入 `VITE_BASE_PATH=/仓库名/`，构建后借助 `actions/deploy-pages@v4` 发布。
 
----
+🎉 完成后即可通过 `https://你的账户.github.io/仓库名/` 访问在线版本。
 
-# Form Matrix · Visual Form Builder
+## 📁 目录速查
 
-## Overview
+- `src/App.vue`：仪表盘主界面与逻辑。
+- `src/style.css`：全局样式、布局与紧凑化控制。
+- `public/temp/*.json`：示例模板文件。
+- `.github/workflows/deploy.yml`：GitHub Pages 部署脚本。
 
-Form Matrix is a **Vite + Vue 3** powered visual builder that helps you design `field_types` specifications through a clean dashboard. It includes template browsing, field editing, JSON preview, and GitHub Pages automation.
+## 🤝 一起协作
 
-## Highlights
-
-- **Template library** with collapsible sidebar and sample/blank presets.
-- **Field builder** for creating text, select, date, array, checkbox, etc., including ordering and validation.
-- **Field list & JSON preview** share one panel via tabs for instant feedback.
-- **Export helpers** to copy or download the generated JSON.
-- **CI-ready deployment** via the included GitHub Actions workflow.
-
-## Development
-
-```bash
-npm install
-npm run dev
-npm run build
-```
-
-Visit `http://localhost:5173/` during development.
-
-## Deployment
-
-- Configure GitHub Pages to use “GitHub Actions”.
-- The provided workflow builds with `VITE_BASE_PATH=/your-repo/` and deploys using `actions/deploy-pages@v4`.
-- Push to `master` or trigger manually to publish updates.
+欢迎提 Issue 或 PR，一起把 Form Matrix 打造成更顺手的表单规范工坊！
