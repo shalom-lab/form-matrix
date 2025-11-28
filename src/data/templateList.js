@@ -18,4 +18,3 @@ export const templateSources = [
     path: 'temp/project.json',
   },
 ];
-
