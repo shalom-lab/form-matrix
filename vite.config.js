@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-const repoName = 'form-matrix' 
+const repoName = 'form-matrix'
 
-// https://vite.dev/config/
-export default defineConfig({
-  base: process.env.GITHUB_PAGES ? `/${repoName}/` : '/',
-  plugins: [vue()],
+export default defineConfig(({ mode }) => {
+  const baseFromEnv = process.env.VITE_BASE_PATH || process.env.BASE_PATH
+  const base = baseFromEnv ?? (mode === 'production' ? `/${repoName}/` : '/')
+  return {
+    base,
+    plugins: [vue()],
+  }
 })
