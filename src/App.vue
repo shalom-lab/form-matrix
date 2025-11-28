@@ -56,7 +56,10 @@ async function fetchTemplates() {
     for (const tpl of templateSources) {
       const templateUrl = new URL(tpl.path, baseUrl).toString()
       const res = await fetch(templateUrl)
-      if (!res.ok) throw new Error(`无法读取 ${tpl.name}`)
+      if (!res.ok) {
+        console.error(`无法读取 ${tpl.name}`, res)
+        throw new Error(`无法读取 ${tpl.name}`)
+      }
       const data = await res.json()
       fetched.push({ ...tpl, data: data.field_types })
     }
