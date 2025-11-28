@@ -1,0 +1,75 @@
+{
+    "field_types": {
+        "name": "🔎 模板示例",
+        "filename": "data-raw/examples.json",
+        "fieldOrder": [
+            "text_example",
+            "textarea_example",
+            "select_example",
+            "date_example",
+            "number_example",
+            "checkbox_example",
+            "radio_example",
+            "array_example"
+        ],
+        "fields": {
+            "text_example": {
+                "type": "text",
+                "label": "文本输入",
+                "default": "默认文本",
+                "required": true
+            },
+            "textarea_example": {
+                "type": "textarea",
+                "label": "多行文本",
+                "default": "默认多行\\n文本内容",
+                "required": true
+            },
+            "select_example": {
+                "type": "select",
+                "label": "下拉选择",
+                "options": [
+                    "选项A",
+                    "选项B",
+                    "选项C"
+                ],
+                "default": "选项B",
+                "required": true
+            },
+            "date_example": {
+                "type": "date",
+                "label": "日期选择",
+                "required": false
+            },
+            "number_example": {
+                "type": "number",
+                "label": "数字输入",
+                "required": false
+            },
+            "checkbox_example": {
+                "type": "checkbox",
+                "label": "是否启用",
+                "default": false,
+                "required": false
+            },
+            "radio_example": {
+                "type": "radio",
+                "label": "选择性别",
+                "options": [
+                    "男",
+                    "女",
+                    "其他"
+                ],
+                "default": "男",
+                "required": true
+            },
+            "array_example": {
+                "type": "array",
+                "label": "标签",
+                "placeholder": "输入标签后按回车或空格",
+                "default": [],
+                "required": true
+            }
+        }
+    }
+}
