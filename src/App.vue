@@ -505,7 +505,7 @@ function toggleTemplatePanel() {
               </div>
               <div v-else class="field-list">
                 <div v-for="field in orderedFields" :key="field.key" class="field-row">
-                  <div>
+  <div>
                     <p class="field-title">
                       {{ field.label || field.key }}
                       <span class="pill">{{ field.type }}</span>
