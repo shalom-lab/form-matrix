@@ -52,8 +52,9 @@ async function fetchTemplates() {
   loadError.value = ''
   try {
     const fetched = []
+    const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
     for (const tpl of templateSources) {
-      const templateUrl = new URL(tpl.path, import.meta.env.BASE_URL).href
+      const templateUrl = new URL(tpl.path, baseUrl).toString()
       const res = await fetch(templateUrl)
       if (!res.ok) throw new Error(`无法读取 ${tpl.name}`)
       const data = await res.json()
