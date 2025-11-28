@@ -11,5 +11,11 @@ export const templateSources = [
     description: '从零开始设计新的表单规范',
     path: 'temp/minimal.json',
   },
+  {
+    id: 'project',
+    name: '🚀 我的项目',
+    description: '一般项目',
+    path: 'temp/project.json',
+  },
 ];
 
