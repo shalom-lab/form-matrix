@@ -53,7 +53,8 @@ async function fetchTemplates() {
   try {
     const fetched = []
     for (const tpl of templateSources) {
-      const res = await fetch(tpl.path)
+      const templateUrl = new URL(tpl.path, import.meta.env.BASE_URL).href
+      const res = await fetch(templateUrl)
       if (!res.ok) throw new Error(`无法读取 ${tpl.name}`)
       const data = await res.json()
       fetched.push({ ...tpl, data: data.field_types })
