@@ -1,1 +1,52 @@
-
+{
+    "name": "🚀 我的项目",
+    "filename": "data-raw/projects.json",
+    "fieldOrder": [
+      "title",
+      "link",
+      "description",
+      "category",
+      "keywords",
+      "stars"
+    ],
+    "fields": {
+      "title": {
+        "type": "text",
+        "label": "项目名称"
+      },
+      "link": {
+        "type": "text",
+        "label": "项目链接"
+      },
+      "description": {
+        "type": "textarea",
+        "label": "项目描述"
+      },
+      "category": {
+        "type": "select",
+        "label": "项目类别",
+        "options": [
+          "网站",
+          "Shiny应用",
+          "书籍",
+          "浏览器插件",
+          "实用工具"
+        ],
+        "default": "网站",
+        "required": true
+      },
+      "keywords": {
+        "type": "array",
+        "label": "关键词",
+        "placeholder": "输入标签后按回车",
+        "default": [],
+        "required": false
+      },
+      "stars": {
+        "type": "number",
+        "label": "推荐指数",
+        "placeholder": "1-5",
+        "required": false
+      }
+    }
+}
