@@ -434,6 +434,13 @@ textarea:focus {
   padding-right: 4px;
 }
 
+.field-list.tall {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* per-type backgrounds */
 .field-row {
   background: #fff;
   border-radius: 12px;
@@ -444,6 +451,34 @@ textarea:focus {
   gap: 12px;
   border: 1px solid #eceffd;
   font-size: 0.88rem;
+}
+
+.field-row.type-text,
+.field-row.type-textarea {
+  background: #f5f0ff;
+  border-color: rgba(128, 90, 213, 0.25);
+}
+
+.field-row.type-select,
+.field-row.type-radio {
+  background: #eefdf5;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.field-row.type-checkbox {
+  background: #fffbea;
+  border-color: rgba(234, 179, 8, 0.35);
+}
+
+.field-row.type-date,
+.field-row.type-number {
+  background: #eaf4ff;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.field-row.type-array {
+  background: #fdf2f8;
+  border-color: rgba(244, 114, 182, 0.3);
 }
 
 .field-title {
@@ -464,6 +499,34 @@ textarea:focus {
   border-radius: 999px;
   font-size: 0.75rem;
   text-transform: uppercase;
+}
+
+.pill-text,
+.pill-textarea {
+  background: #dcd1ff;
+  color: #4c1d95;
+}
+
+.pill-select,
+.pill-radio {
+  background: #c8f7e3;
+  color: #047857;
+}
+
+.pill-checkbox {
+  background: #fde68a;
+  color: #92400e;
+}
+
+.pill-date,
+.pill-number {
+  background: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.pill-array {
+  background: #fbcfe8;
+  color: #9d174d;
 }
 
 .field-actions {

@@ -506,11 +506,16 @@ function toggleTemplatePanel() {
             还没有字段，可以在旁边新增
           </div>
           <div v-else class="field-list tall">
-            <div v-for="field in orderedFields" :key="field.key" class="field-row">
+            <div
+              v-for="field in orderedFields"
+              :key="field.key"
+              class="field-row"
+              :class="`type-${field.type}`"
+            >
   <div>
                 <p class="field-title">
                   {{ field.label || field.key }}
-                  <span class="pill">{{ field.type }}</span>
+                  <span class="pill" :class="`pill-${field.type}`">{{ field.type }}</span>
                 </p>
                 <p class="field-meta">{{ field.key }}</p>
               </div>
